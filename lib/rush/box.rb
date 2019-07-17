@@ -72,7 +72,7 @@ class Rush::Box
 
 		if options[:background]
 			pid = connection.bash(cmd_with_env, options[:user], true, options[:reset_environment])
-			processes.find_by_pid(pid)
+			processes.select{|process| process.pid == pid}.first
 		else
 			connection.bash(cmd_with_env, options[:user], false, options[:reset_environment])
 		end
