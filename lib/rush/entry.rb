@@ -16,7 +16,7 @@ class Rush::Entry
 	# The factory checks to see if the full path has a trailing slash for
 	# creating a Rush::Dir rather than the default Rush::File.
 	def self.factory(full_path, box=nil)
-		if full_path.tail(1) == '/'
+		if full_path.slice(-1,1) == '/'
 			Rush::Dir.new(full_path, box)
 		elsif File.directory?(full_path)
 			Rush::Dir.new(full_path, box)

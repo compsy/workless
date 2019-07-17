@@ -91,7 +91,7 @@ class Rush::Dir < Rush::Entry
 
 	# Create an empty subdir within this dir.
 	def create_dir(name)
-		name += '/' unless name.tail(1) == '/'
+		name += '/' unless name.slice(-1,1) == '/'
 		self[name].create
 	end
 
