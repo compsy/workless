@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency('rails')
   s.add_runtime_dependency('platform-api')
-  s.add_runtime_dependency('rush')
+  # s.add_runtime_dependency('rush')
   s.add_runtime_dependency('delayed_job', ['>= 2.0.7'])
 
   s.required_ruby_version = '>= 2.2.4'
