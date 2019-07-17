@@ -4,6 +4,14 @@ require File.dirname(__FILE__) + '/workless/scalers/base'
 require File.dirname(__FILE__) + '/workless/scaler'
 require File.dirname(__FILE__) + '/workless/controllers/helpers'
 require File.dirname(__FILE__) + '/workless/heroku_error_handler'
+require File.dirname(__FILE__) + '/rush/box'
+require File.dirname(__FILE__) + '/rush/dir'
+require File.dirname(__FILE__) + '/rush/entry'
+require File.dirname(__FILE__) + '/rush/file'
+require File.dirname(__FILE__) + '/rush/local'
+require File.dirname(__FILE__) + '/rush/process_set'
+require File.dirname(__FILE__) + '/rush/process'
+require File.dirname(__FILE__) + '/rush/remote'
 require File.dirname(__FILE__) + '/workless/railtie' if defined?(Rails::Railtie)
 
 ActiveSupport.on_load(:action_controller) do
